@@ -1,0 +1,45 @@
+.navbar {
+    background: rgb(4,92,227);
+    background: linear-gradient(45deg, rgba(4,92,227,1) 0%, rgba(11,64,182,1) 8%, rgba(240,49,94,1) 60%, rgba(252,131,25,1) 90%, rgba(249,189,57,1) 100%); 
+    min-height: 300px;
+    margin: 0;
+    overflow: auto;
+    color: #fff;
+    box-shadow: inset 0px -10px 30px rgba(0, 0, 0, 0.2);
+}
+.navbar--hero {
+    margin-top: 0;
+    font-size: 72px;
+    font-weight: 580;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+}
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
+}
+.navbar--code-status {
+    display: inline-block;
+    font-size: 18px;
+    background: #27282C;
+    /* background: rgb(41, 45, 62); */
+    padding: 15px 20px;
+    border-radius: 30px;
+}
+.navbar--code-status span {
+    animation-name: fadeInOut;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.navbar--flexbox {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 650px) {
+    .navbar--flexbox {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
