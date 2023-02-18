@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.13.0"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.10"],\
+            ["focus-trap-react", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:10.1.0"],\
             ["gatsby", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:5.6.0"],\
             ["gatsby-plugin-image", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:3.6.0"],\
             ["gatsby-plugin-mdx", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:5.6.0"],\
@@ -9455,6 +9456,48 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["focus-trap", [\
+        ["npm:7.3.1", {\
+          "packageLocation": "./.yarn/cache/focus-trap-npm-7.3.1-4e30b5286d-88f5166fd8.zip/node_modules/focus-trap/",\
+          "packageDependencies": [\
+            ["focus-trap", "npm:7.3.1"],\
+            ["tabbable", "npm:6.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["focus-trap-react", [\
+        ["npm:10.1.0", {\
+          "packageLocation": "./.yarn/cache/focus-trap-react-npm-10.1.0-4fcd79f9e7-8f6901d890.zip/node_modules/focus-trap-react/",\
+          "packageDependencies": [\
+            ["focus-trap-react", "npm:10.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:10.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/focus-trap-react-virtual-3b2537c382/0/cache/focus-trap-react-npm-10.1.0-4fcd79f9e7-8f6901d890.zip/node_modules/focus-trap-react/",\
+          "packageDependencies": [\
+            ["focus-trap-react", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:10.1.0"],\
+            ["@types/prop-types", null],\
+            ["@types/react", "npm:18.0.28"],\
+            ["@types/react-dom", "npm:18.0.10"],\
+            ["focus-trap", "npm:7.3.1"],\
+            ["prop-types", null],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:18.2.0"],\
+            ["tabbable", "npm:6.1.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/prop-types",\
+            "@types/react-dom",\
+            "@types/react",\
+            "prop-types",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["follow-redirects", [\
         ["npm:1.15.2", {\
           "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
@@ -12424,6 +12467,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:18.13.0"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.10"],\
+            ["focus-trap-react", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:10.1.0"],\
             ["gatsby", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:5.6.0"],\
             ["gatsby-plugin-image", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:3.6.0"],\
             ["gatsby-plugin-mdx", "virtual:bf0109dfbc9968dbc515aa8900a7b1ad69a8f0b581d0d61a5d1e1d7de3be559a20f02376d5d7db902a0056eaac2606c0f27469c7f6065e4a0d0f6e992accb8e0#npm:5.6.0"],\
@@ -17961,6 +18005,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["swap-case", "npm:2.0.2"],\
             ["tslib", "npm:2.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tabbable", [\
+        ["npm:6.1.1", {\
+          "packageLocation": "./.yarn/cache/tabbable-npm-6.1.1-483e0de3c7-3486394972.zip/node_modules/tabbable/",\
+          "packageDependencies": [\
+            ["tabbable", "npm:6.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
