@@ -28,16 +28,13 @@ export const ImageModal = ({
   useEffect(() => {
     document.addEventListener("keydown", onKeyDown);
     document.body.classList.add(s.disableScrollForModal);
-    console.log("MOUNT");
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.classList.remove(s.disableScrollForModal);
-      console.log("DEMOUNT");
     };
   }, []);
 
   const _onClose = () => {
-    console.log("CLOSING");
     onClose && onClose();
   };
 

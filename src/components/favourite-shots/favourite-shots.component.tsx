@@ -7,10 +7,8 @@ const FavouriteShot = (props: LinkableImageProps) => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const onClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     event.preventDefault();
-    console.log("click");
     setShowModal(true);
   };
-  console.log("render");
 
   const alt = `${props.common} (${props.scientific})`;
   return (
