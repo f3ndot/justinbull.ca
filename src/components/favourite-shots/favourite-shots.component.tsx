@@ -12,10 +12,11 @@ const FavouriteShot = (props: LinkableImageProps) => {
   };
   console.log("render");
 
+  const alt = `${props.common} (${props.scientific})`;
   return (
     <>
       <a href="#" onClick={onClick}>
-        <img src={props.src} alt={props.alt} title={props.alt} />
+        <img src={props.src} alt={alt} title={alt} />
       </a>
       {showModal && (
         <ImageModal {...props} onClose={() => setShowModal(false)} />
@@ -64,7 +65,9 @@ const favouriteShots = _favouriteShots.map(
       key={i}
       href={a}
       src={src}
-      alt={`${common} (${scientific})`}
+      common={common}
+      scientific={scientific}
+      // alt={`${common} (${scientific})`}
     />
   )
 );

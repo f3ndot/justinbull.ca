@@ -1,5 +1,7 @@
 export interface LinkableImageProps {
   src: string;
-  alt: string;
+  //   alt: string;
   href: string;
+  common: string;
+  scientific: string;
 }

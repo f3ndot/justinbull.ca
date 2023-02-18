@@ -6,7 +6,13 @@ interface ImageModalProps extends LinkableImageProps {
   onClose?: () => void;
 }
 
-export const ImageModal = ({ alt, href, src, onClose }: ImageModalProps) => {
+export const ImageModal = ({
+  common,
+  scientific,
+  href,
+  src,
+  onClose,
+}: ImageModalProps) => {
   const onKeyDown = (ev: KeyboardEvent) => {
     switch (ev.code) {
       case "Escape":
@@ -33,15 +39,22 @@ export const ImageModal = ({ alt, href, src, onClose }: ImageModalProps) => {
     onClose && onClose();
   };
 
+  const alt = `${common} (${scientific})`;
   return (
     <div className={s.modalRoot}>
       <div className={s.modalBackdrop} onClick={_onClose}></div>
-      <div className={s.modal}>
-        <button className={s.cross} onClick={_onClose}>
-          &times;
-        </button>
+      <div style={{ margin: "30px 0" }}>
         <div className={s.modalContent}>
-          <h2 style={{ textAlign: "center", margin: "10px 0 5px 0" }}>{alt}</h2>
+          <button
+            className={s.cross}
+            onClick={_onClose}
+            aria-label="Close modal"
+          >
+            <span aria-hidden="true">✕</span>
+          </button>
+          <h2 style={{ textAlign: "center", margin: "10px 0 5px 0" }}>
+            {common} <em>({scientific})</em>
+          </h2>
           <div
             style={{ minHeight: 0, display: "flex", justifyContent: "center" }}
           >
