@@ -1,0 +1,20 @@
+.favouriteShotsGrid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 650px) {
+    .favouriteShotsGrid {
+        gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+a img {
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: block;
+    &:hover {
+        outline: 3px solid #c5c5c5;
+    }
+}

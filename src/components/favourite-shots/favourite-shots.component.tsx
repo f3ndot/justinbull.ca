@@ -1,35 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { ImageModal } from "../image-modal";
+import * as s from "./favourite-shots.module.scss";
+import { LinkableImageProps } from "./favourite-shots.types";
 
-const FavouriteShot = ({
-  src,
-  alt,
-  href,
-}: {
-  src: string;
-  alt: string;
-  href: string;
-}) => (
-  <>
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      style={{ display: "block" }}
-    >
-      <img
-        src={src}
-        alt={alt}
-        title={alt}
-        style={{
-          maxWidth: "100%",
-          borderRadius: "20px",
-          overflow: "hidden",
-          display: "block",
-        }}
-      />
-    </a>
-  </>
-);
+const FavouriteShot = (props: LinkableImageProps) => {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const onClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
+    event.preventDefault();
+    console.log("click");
+    setShowModal(true);
+  };
+  console.log("render");
+
+  return (
+    <>
+      <a href="#" onClick={onClick}>
+        <img src={props.src} alt={props.alt} title={props.alt} />
+      </a>
+      {showModal && (
+        <ImageModal {...props} onClose={() => setShowModal(false)} />
+      )}
+    </>
+  );
+};
 
 interface favShot {
   src: string;
@@ -52,16 +45,16 @@ const _favouriteShots: favShot[] = [
     scientific: "Xylocopa virginica",
   },
   {
-    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/129602703/large.jpg",
-    a: "https://inaturalist.ca/observations/79144109",
-    common: "Eastern Carpenter Bee",
-    scientific: "Xylocopa virginica",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/245454671/large.jpg",
+    a: "https://inaturalist.ca/observations/143137155",
+    common: "Northern Cardinal",
+    scientific: "Cardinalis cardinalis",
   },
   {
-    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/129602703/large.jpg",
-    a: "https://inaturalist.ca/observations/79144109",
-    common: "Eastern Carpenter Bee",
-    scientific: "Xylocopa virginica",
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/241972604/large.jpg",
+    a: "https://inaturalist.ca/observations/141267846",
+    common: "Golden-crowned Kinglet",
+    scientific: "Regulus satrapa",
   },
 ];
 
@@ -77,5 +70,5 @@ const favouriteShots = _favouriteShots.map(
 );
 
 export const FavouriteShots = () => (
-  <div style={{ display: "grid", gap: "12px", gridTemplateColumns: 'repeat(3, 1fr)' }}>{favouriteShots}</div>
+  <div className={s.favouriteShotsGrid}>{favouriteShots}</div>
 );

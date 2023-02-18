@@ -1,0 +1,94 @@
+// $modalBGColor: rgb(41, 45, 62);
+$modalBGColor: white;
+.modalRoot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.modalBackdrop {
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(#000, 0.1);
+}
+.modal {
+
+    margin: 15px;
+    z-index: 999;
+    position: relative;
+}
+.cross {
+    border: none;
+    // background-color: mix($modalBGColor, black, 70%);
+    background-color: mix(red, white, 70%);
+
+    color: white;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 0.8;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 10px;
+    &:hover, &:focus {
+        background-color: mix(red, white, 50%);
+    }
+}
+$myLinkButtonColor: #074FC9;
+a.linkButton {
+    display: block;
+    background-color: $myLinkButtonColor;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 10px; // ------ TO FIX WEIRD PADDING: 15PX
+    &:visited {
+        background-color: $myLinkButtonColor;
+        color: white;
+    }
+    &:hover {
+        // background-color: mix($myLinkButtonColor, white, 90%);
+        background-color: #C3346F;
+        color: white;
+    }
+    &:active {
+        background-color: #F96D2B;
+        color: white;
+    }
+}
+.disableScrollForModal {
+    overflow: hidden;
+}
+.modalContent {
+    border-radius: 15px;
+    background: $modalBGColor;
+    box-shadow: 0 0 10px #0001;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // width: 100%;
+    // padding: 15px; ------- MOVE SOMEWHERE ELSE
+    padding-left: 10px;
+    padding-right: 10px;
+
+    max-height: 100%;
+    img {
+        border-radius: 5px;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+}
