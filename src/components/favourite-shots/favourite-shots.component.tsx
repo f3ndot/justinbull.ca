@@ -15,7 +15,7 @@ const FavouriteShot = (props: LinkableImageProps) => {
   const alt = `${props.common} (${props.scientific})`;
   return (
     <>
-      <a href="#" onClick={onClick}>
+      <a href="#" onClick={onClick} className={s.galleryLink}>
         <img src={props.src} alt={alt} title={alt} />
       </a>
       {showModal && (

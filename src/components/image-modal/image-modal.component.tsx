@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { LinkableImageProps } from "../favourite-shots/favourite-shots.types";
+import { Icon } from "../icon";
 import * as s from "./image-modal.module.scss";
+// import externalLink from "../../images/external-link.svg";
 
 interface ImageModalProps extends LinkableImageProps {
   onClose?: () => void;
@@ -44,7 +46,7 @@ export const ImageModal = ({
     <div className={s.modalRoot}>
       <div className={s.modalBackdrop} onClick={_onClose}></div>
       <div style={{ margin: "30px 0" }}>
-        <div className={s.modalContent}>
+        <div className={s.modalContent} role="dialog">
           <button
             className={s.cross}
             onClick={_onClose}
@@ -67,6 +69,7 @@ export const ImageModal = ({
             target="_blank"
           >
             See Observation on iNaturalist
+            <Icon style={{ flexShrink: 0 }} type="externalLink" />
           </a>
         </div>
       </div>

@@ -39,6 +39,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <img
             src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
             style={{ height: "0.85em" }}
+            alt="Creative Commons copyright symbol"
           />{" "}
           Justin Bull, some rights reserved{" "}
           <small>

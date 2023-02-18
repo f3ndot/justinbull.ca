@@ -1,24 +1,24 @@
 $darkgrey: rgb(41, 45, 62);
 $modalBGColor: white;
 .modalRoot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
 }
 .modalBackdrop {
-    backdrop-filter: blur(10px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-    background-color: rgba(#000, 0.1);
+  background-color: rgba(#000, 0.1);
 }
 // .modal {
 
@@ -33,83 +33,88 @@ $modalBGColor: white;
 //     }
 // }
 .cross {
-    border: none;
-    // background-color: mix($modalBGColor, black, 70%);
-    // background-color: mix(red, white, 70%);
+  border: none;
+  // background-color: mix($modalBGColor, black, 70%);
+  // background-color: mix(red, white, 70%);
 
-    color: $darkgrey;
-    cursor: pointer;
-    font-size: 21px;
-    font-weight: bolder;
-    line-height: 0.8;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    padding: 8px;
-    font-weight: bold;
-    border-radius: 10px;
-    &:hover, &:focus {
-        background-color: mix(red, white, 70%);
-        color: white;
-    }
+  color: $darkgrey;
+  cursor: pointer;
+  font-size: 21px;
+  font-weight: bolder;
+  line-height: 0.8;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 8px;
+  font-weight: bold;
+  border-radius: 10px;
+  &:hover,
+  &:focus {
+    background-color: mix(red, white, 70%);
+    color: white;
+  }
 }
-$myLinkButtonColor: #074FC9;
+$myLinkButtonColor: #074fc9;
 a.linkButton {
-    display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  background-color: $myLinkButtonColor;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 10px; // ------ TO FIX WEIRD PADDING: 15PX
+  &:visited {
     background-color: $myLinkButtonColor;
     color: white;
-    padding: 15px;
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-    margin-bottom: 10px; // ------ TO FIX WEIRD PADDING: 15PX
-    &:visited {
-        background-color: $myLinkButtonColor;
-        color: white;
-    }
-    &:hover {
-        // background-color: mix($myLinkButtonColor, white, 90%);
-        background-color: #C3346F;
-        color: white;
-    }
-    &:active {
-        background-color: #F96D2B;
-        color: white;
-    }
+  }
+  &:hover,
+  &:focus {
+    // background-color: mix($myLinkButtonColor, white, 90%);
+    background-color: #c3346f;
+    color: white;
+  }
+  &:active {
+    background-color: #f96d2b;
+    color: white;
+  }
 }
 .disableScrollForModal {
-    overflow: hidden;
+  overflow: hidden;
 }
 .modalContent {
+  margin: 0 15px;
+  z-index: 999;
+  position: relative;
 
-    margin: 0 15px;
-    z-index: 999;
-    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 
-    top:50%;
-    transform: translateY(-50%);
+  border-radius: 15px;
+  background: $modalBGColor;
+  box-shadow: 0 0 10px #0001;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  // width: 100%;
+  // padding: 15px; ------- MOVE SOMEWHERE ELSE
+  padding-left: 10px;
+  padding-right: 10px;
 
-    border-radius: 15px;
-    background: $modalBGColor;
-    box-shadow: 0 0 10px #0001;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    // width: 100%;
-    // padding: 15px; ------- MOVE SOMEWHERE ELSE
-    padding-left: 10px;
-    padding-right: 10px;
-
+  max-height: 100%;
+  img {
+    border-radius: 5px;
+    max-width: 100%;
     max-height: 100%;
-    img {
-        border-radius: 5px;
-        max-width: 100%;
-        max-height: 100%;
-        display: block;
-    }
+    display: block;
+  }
 }
 h2 em {
-    color:rgb(98, 104, 128);
-    font-size: 0.8em;
-    font-weight: 400;
+  color: rgb(98, 104, 128);
+  font-size: 0.8em;
+  font-weight: 400;
 }
