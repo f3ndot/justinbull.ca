@@ -68,10 +68,16 @@ export const ImageModal = ({
               style={{
                 minHeight: 0,
                 display: "flex",
-                justifyContent: "center",
               }}
             >
-              <img src={src} alt={alt} title={alt} />
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  style={{ margin: "auto" }}
+                />
+              </div>
             </div>
             <a
               href={href}
