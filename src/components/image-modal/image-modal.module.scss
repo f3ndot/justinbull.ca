@@ -52,6 +52,7 @@ $modalBGColor: white;
   &:focus {
     background-color: mix(red, white, 70%);
     color: white;
+    outline-offset: 2px;
   }
 }
 $myLinkButtonColor: #074fc9;
@@ -77,6 +78,7 @@ a.linkButton {
     // background-color: mix($myLinkButtonColor, white, 90%);
     background-color: #c3346f;
     color: white;
+    outline-offset: 2px;
   }
   &:active {
     background-color: #f96d2b;

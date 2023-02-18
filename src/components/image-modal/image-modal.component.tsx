@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { LinkableImageProps } from "../favourite-shots/favourite-shots.types";
 import { Icon } from "../icon";
 import * as s from "./image-modal.module.scss";
-// import externalLink from "../../images/external-link.svg";
 
 interface ImageModalProps extends LinkableImageProps {
   onClose?: () => void;
@@ -46,15 +45,23 @@ export const ImageModal = ({
     <div className={s.modalRoot}>
       <div className={s.modalBackdrop} onClick={_onClose}></div>
       <div style={{ margin: "30px 0" }}>
-        <div className={s.modalContent} role="dialog">
+        <div
+          className={s.modalContent}
+          role="dialog"
+          aria-labelledby="modalTitle"
+        >
           <button
             className={s.cross}
             onClick={_onClose}
             aria-label="Close modal"
+            tabIndex={0}
           >
             <span aria-hidden="true">✕</span>
           </button>
-          <h2 style={{ textAlign: "center", margin: "10px 0 5px 0" }}>
+          <h2
+            id="modalTitle"
+            style={{ textAlign: "center", margin: "10px 0 5px 0" }}
+          >
             {common} <em>({scientific})</em>
           </h2>
           <div
