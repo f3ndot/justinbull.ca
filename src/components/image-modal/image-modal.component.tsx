@@ -3,6 +3,7 @@ import { LinkableImageProps } from "../favourite-shots/favourite-shots.types";
 import { Icon } from "../icon";
 import FocusTrap from "focus-trap-react";
 import * as s from "./image-modal.module.scss";
+import { ExternalA } from "../external-link";
 
 interface ImageModalProps extends LinkableImageProps {
   onClose?: () => void;
@@ -84,15 +85,14 @@ export const ImageModal = ({
                 />
               </div>
             </div>
-            <a
+            <ExternalA
               href={href}
+              linkIcon={true}
+              iconSize="font"
               className={s.linkButton}
-              rel="noopener"
-              target="_blank"
             >
               See Observation on iNaturalist
-              <Icon style={{ flexShrink: 0 }} type="externalLink" />
-            </a>
+            </ExternalA>
           </div>
         </div>
       </div>
