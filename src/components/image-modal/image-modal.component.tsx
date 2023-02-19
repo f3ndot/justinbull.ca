@@ -6,6 +6,7 @@ import * as s from "./image-modal.module.scss";
 
 interface ImageModalProps extends LinkableImageProps {
   onClose?: () => void;
+  alt?: string;
 }
 
 export const ImageModal = ({
@@ -13,6 +14,8 @@ export const ImageModal = ({
   scientific,
   href,
   src,
+  alt,
+  unconfirmed,
   onClose,
 }: ImageModalProps) => {
   const onKeyDown = (ev: KeyboardEvent) => {
@@ -38,7 +41,6 @@ export const ImageModal = ({
     onClose && onClose();
   };
 
-  const alt = `${common} (${scientific})`;
   return (
     <FocusTrap>
       <div className={s.modalRoot}>
@@ -63,6 +65,9 @@ export const ImageModal = ({
               style={{ textAlign: "center", margin: "10px 0 5px 0" }}
             >
               {common} <em>({scientific})</em>
+              {unconfirmed && (
+                <span className={s.unconfirmed}>ID&nbsp;Unconfirmed</span>
+              )}
             </h2>
             <div
               style={{

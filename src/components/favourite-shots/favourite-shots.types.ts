@@ -4,4 +4,5 @@ export interface LinkableImageProps {
   href: string;
   common: string;
   scientific: string;
+  unconfirmed?: boolean;
 }
