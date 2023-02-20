@@ -60,7 +60,7 @@ a.linkButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 2px; // plus the 3px margin-left in ExternalA's icon
 
   background-color: $myLinkButtonColor;
   color: white;

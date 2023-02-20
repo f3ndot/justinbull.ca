@@ -5,16 +5,33 @@ import { ContentWrapper } from "../components/content-wrapper";
 import { FavouriteShots } from "../components/favourite-shots";
 import { StaticImage } from "gatsby-plugin-image";
 import "./index.module.css";
-import { Icon } from "../components/icon";
 import { ExternalA } from "../components/external-link/external-link.component";
 
 const IndexPage: React.FC<PageProps> = () => {
+  const cveList = [
+    {
+      link: "https://www.openwall.com/lists/oss-security/2019/08/19/1",
+      cve: "CVE-2019-15150",
+      software: "MediaWiki OAuth2 Client",
+    },
+    {
+      link: "https://www.openwall.com/lists/oss-security/2016/08/19/2",
+      cve: "CVE-2016-6582",
+      software: "Doorkeeper",
+    },
+    {
+      link: "https://www.openwall.com/lists/oss-security/2015/09/06/2",
+      cve: "CVE-2015-7225",
+      software: "Devise-Two-Factor",
+    },
+  ];
+
   return (
     <main>
       <Navbar />
       <ContentWrapper contentSpacing="p2" horizontalOnly>
-        <div style={{ display: "flex" }}>
-          <div>
+        <div style={{ display: "flex", gap: "20px" }}>
+          <div style={{ flexBasis: 0, flexGrow: 1 }}>
             <h1>Things I Like</h1>
             <ul>
               <li>
@@ -32,17 +49,21 @@ const IndexPage: React.FC<PageProps> = () => {
               <li>Municipal Politics 🗳</li>
               <li>Cooking 🍳</li>
               <li>Editing Wikipedia 📝</li>
-              <li>
-                History of banal, everyday objects 🏺 (
-                <ExternalA href="https://www.youtube.com/watch?v=-BHXH5am7B0">
-                  like ketchup!
-                </ExternalA>
-                )
-              </li>
               <li>Cycling 🚴‍♀️</li>
+
+              <li>
+                History of banal, everyday objects 🏺 <br />
+                <small>
+                  (
+                  <ExternalA href="https://www.youtube.com/watch?v=-BHXH5am7B0">
+                    like ketchup!
+                  </ExternalA>
+                  )
+                </small>
+              </li>
             </ul>
           </div>
-          <div>
+          <div style={{ flexBasis: 0, flexGrow: 1 }}>
             <h1>Work-related</h1>
             <ul>
               <li>
@@ -52,9 +73,37 @@ const IndexPage: React.FC<PageProps> = () => {
                 🔕
               </li>
               <li>
-                <a href="/resume/">Resumé</a> (updated 2021)
+                <a href="/resume/">Resumé</a> (2021)
               </li>
-              <li></li>
+              <li>
+                <ExternalA href="https://www.github.com/f3ndot">
+                  GitHub
+                </ExternalA>
+              </li>
+              <li>
+                <ExternalA href="http://www.linkedin.com/in/justinasbull">
+                  LinkedIn
+                </ExternalA>
+              </li>
+              <li>
+                Awarded{" "}
+                <ExternalA href="https://betakit.com/heres-the-list-of-canadas-developer-30-under-30/">
+                  Developer 30 Under 30
+                </ExternalA>{" "}
+                (2018)
+              </li>
+              <li>
+                Discovered &amp; disclosed {cveList.length} CVEs:
+                <ul style={{ paddingLeft: "20px" }}>
+                  {cveList.map(({ cve, link, software }) => (
+                    <li key={cve}>
+                      <small>
+                        <ExternalA href={link}>{cve}</ExternalA> ({software})
+                      </small>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -70,7 +119,9 @@ const IndexPage: React.FC<PageProps> = () => {
           Justin Bull, some rights reserved{" "}
           <small>
             (
-            <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+            <ExternalA href="https://creativecommons.org/licenses/by/4.0/">
+              CC BY 4.0
+            </ExternalA>
             )
           </small>
         </p>

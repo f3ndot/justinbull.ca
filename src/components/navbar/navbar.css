@@ -15,8 +15,22 @@
     margin-bottom: 30px;
 }
 @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    20%, 80% { opacity: 1; }
+    from {
+        /* transform: translateY(-25%); */
+        opacity: 0
+    }
+    30% {
+        /* transform: translateY(0%); */
+        opacity: 1;
+    }
+    70% {
+        /* transform: translateY(0%); */
+        opacity: 1;
+    }
+    to {
+        /* transform: translateY(25%); */
+        opacity: 0;
+    }
 }
 .navbar--code-status {
     display: inline-block;
@@ -27,9 +41,12 @@
     border-radius: 30px;
 }
 .navbar--code-status span {
+    opacity: 0;
+    display: inline-block;
     animation-name: fadeInOut;
     animation-iteration-count: 1;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
+
 }
 .navbar--flexbox {
     display: flex;
@@ -42,4 +59,29 @@
         margin-top: 30px;
         margin-bottom: 50px;
     }
+}
+
+/* @keyframes hovering {
+    0% {
+      transform: translateY(0%);
+    }
+    50% {
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+} */
+.navbar--hero-image {
+    border-radius: 128px;
+    margin: 0 10px 30px 20px;
+    box-shadow: 10px 10px 0px #9B377E;
+    width: 256px;
+
+    /* animation-name: hovering;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate; */
 }

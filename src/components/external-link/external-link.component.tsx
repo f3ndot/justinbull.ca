@@ -16,7 +16,13 @@ export const ExternalA = ({
   iconSize,
   ...props
 }: ExternalAProps) => {
-  const icon = <Icon type="externalLink" size={iconSize ?? "small"} />;
+  const icon = (
+    <Icon
+      type="externalLink"
+      style={{ marginLeft: "3px" }}
+      size={iconSize ?? "small"}
+    />
+  );
   return (
     <>
       <a href={href} target="_blank" rel="noreferrer" {...props}>
