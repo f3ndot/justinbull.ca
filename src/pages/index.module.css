@@ -17,7 +17,12 @@ body {
 
     margin: 0;
     padding: 0;
+    /* background-color: #fff; */
+    background-color: rgb(41, 45, 62);
+}
+main {
     background-color: #fff;
+
 }
 a, a:visited {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -35,6 +40,6 @@ footer {
   padding: 10px;
   border-top: 1px solid #ddd;
   background-color: rgb(41, 45, 62);/* #eee; */
-  box-shadow: inset 0px 2px 5px #000a;
+  box-shadow: inset 0px 5px 5px #0004;
   color: #fff;
 }
