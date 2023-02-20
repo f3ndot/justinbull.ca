@@ -12,14 +12,14 @@ interface ExternalAProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 export const ExternalA = ({
   href,
   children,
-  linkIcon,
+  linkIcon = true,
   iconSize,
   ...props
 }: ExternalAProps) => {
   const icon = (
     <Icon
       type="externalLink"
-      style={{ marginLeft: "3px" }}
+      style={{ marginLeft: "2px" }}
       size={iconSize ?? "small"}
     />
   );

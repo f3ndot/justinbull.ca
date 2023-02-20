@@ -43,7 +43,7 @@ export const Navbar = () => {
           <div>
             <h1 className="navbar--hero">Hello, I'm Justin Bull</h1>
             <h2 className="navbar--sub-hero">
-              I have 10+ years of experiencing building full-stack web
+              I have 10+ years of experience building full-stack web
               applications using technologies like Python, Ruby, React,
               AngularJS, and BackboneJS.
             </h2>
