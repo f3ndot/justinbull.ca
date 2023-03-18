@@ -1,4 +1,4 @@
-# justinbull-site
+# justinbull.ca
 
 My personal website source code
 
