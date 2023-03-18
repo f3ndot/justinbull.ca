@@ -25,6 +25,12 @@ const FavouriteShot = (props: LinkableImageProps) => {
 
 const _favouriteShots: LinkableImageProps[] = [
   {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/257205266/large.jpg",
+    href: "https://inaturalist.ca/observations/149278527",
+    common: "Eastern Screech-Owl",
+    scientific: "Megascops asio",
+  },
+  {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/129602703/large.jpg",
     href: "https://inaturalist.ca/observations/79144109",
     common: "Eastern Carpenter Bee",
@@ -66,12 +72,6 @@ const _favouriteShots: LinkableImageProps[] = [
     common: "Elm Mushroom",
     scientific: "Hypsizygus ulmarius",
     unconfirmed: true,
-  },
-  {
-    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/254265172/large.jpg",
-    href: "https://inaturalist.ca/observations/147734420",
-    common: "Eastern Screech-Owl",
-    scientific: "Megascops asio",
   },
   {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/244593317/large.jpeg",
