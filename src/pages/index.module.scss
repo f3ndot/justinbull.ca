@@ -1,0 +1,66 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  margin: 0;
+  padding: 0;
+  /* background-color: #fff; */
+  background-color: rgb(41, 45, 62);
+}
+main {
+  background-color: #fff;
+}
+a,
+a:visited {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-weight: 600;
+  color: #074fc9;
+}
+/* a:visited {color: #503B9B; } */
+a:hover {
+  color: #c3346f;
+}
+a:active {
+  color: #f96d2b;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: rgb(41, 45, 62); /* #eee; */
+  box-shadow: inset 0px 5px 5px #0004;
+  color: #fff;
+}
+.mainFlex {
+  display: flex;
+  gap: 20px;
+}
+.mainFlexColumn {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+@media screen and (max-width: 650px) {
+  .mainFlex {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .mainFlexColumn {
+    flex-basis: auto;
+  }
+}

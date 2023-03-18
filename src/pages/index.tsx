@@ -4,7 +4,7 @@ import { Navbar } from "../components/navbar";
 import { ContentWrapper } from "../components/content-wrapper";
 import { FavouriteShots } from "../components/favourite-shots";
 import { StaticImage } from "gatsby-plugin-image";
-import "./index.module.css";
+import * as s from "./index.module.scss";
 import { ExternalA } from "../components/external-link/external-link.component";
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -30,8 +30,8 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <Navbar />
       <ContentWrapper contentSpacing="p2" horizontalOnly>
-        <div style={{ display: "flex", gap: "20px" }}>
-          <div style={{ flexBasis: 0, flexGrow: 1 }}>
+        <div className={s.mainFlex}>
+          <div className={s.mainFlexColumn}>
             <h1>Things I Like</h1>
             <ul>
               <li>
@@ -63,7 +63,7 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
             </ul>
           </div>
-          <div style={{ flexBasis: 0, flexGrow: 1 }}>
+          <div className={s.mainFlexColumn}>
             <h1>Work-related</h1>
             <ul>
               <li>
@@ -107,7 +107,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </ul>
           </div>
         </div>
-        <h1>My Fav Shots</h1>
+        <h1>My Fav Nature Shots</h1>
         <p>
           All photos{" "}
           <img
