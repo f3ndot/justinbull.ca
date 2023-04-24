@@ -73,9 +73,6 @@ const IndexPage: React.FC<PageProps> = () => {
               <a href="/resume/">Resumé</a> (2021)
             </li>
             <li>
-              <ExternalA href="https://www.github.com/f3ndot">GitHub</ExternalA>
-            </li>
-            <li>
               <ExternalA href="http://www.linkedin.com/in/justinasbull">
                 LinkedIn
               </ExternalA>
@@ -101,6 +98,17 @@ const IndexPage: React.FC<PageProps> = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div className={s.contactBanner}>
+        <a href="mailto:me@justinbull.ca">Email</a> •&nbsp;
+        <ExternalA href="https://www.instagram.com/f3ndot">
+          Instagram
+        </ExternalA>{" "}
+        •&nbsp;
+        <ExternalA href="https://www.github.com/f3ndot">GitHub</ExternalA>{" "}
+        •&nbsp;
+        <a href="https://blog.justinbull.ca/">Blog</a>{" "}
+        <small>(seldom updated)</small>
       </div>
       <h1>My Fav Nature Shots</h1>
       <p>

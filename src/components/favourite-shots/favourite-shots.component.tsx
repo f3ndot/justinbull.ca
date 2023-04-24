@@ -25,6 +25,12 @@ const FavouriteShot = (props: LinkableImageProps) => {
 
 const _favouriteShots: LinkableImageProps[] = [
   {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/266002730/large.jpg",
+    href: "https://inaturalist.ca/observations/153975935",
+    common: "Common Loon",
+    scientific: "Gavia immer",
+  },
+  {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/257205266/large.jpg",
     href: "https://inaturalist.ca/observations/149278527",
     common: "Eastern Screech-Owl",
@@ -35,6 +41,12 @@ const _favouriteShots: LinkableImageProps[] = [
     href: "https://inaturalist.ca/observations/79144109",
     common: "Eastern Carpenter Bee",
     scientific: "Xylocopa virginica",
+  },
+  {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/266003205/large.jpg",
+    href: "https://inaturalist.ca/observations/153975944",
+    common: "Muskrat",
+    scientific: "Ondatra zibethicus",
   },
   {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/245454671/large.jpg",
