@@ -70,7 +70,7 @@ const IndexPage: React.FC<PageProps> = () => {
               🔕
             </li>
             <li>
-              <a href="/resume/">Resumé</a> (2021)
+              <a href="/resume/">Resumé</a> (2023)
             </li>
             <li>
               <ExternalA href="http://www.linkedin.com/in/justinasbull">
