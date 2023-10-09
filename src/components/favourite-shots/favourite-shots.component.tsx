@@ -25,10 +25,22 @@ const FavouriteShot = (props: LinkableImageProps) => {
 
 const _favouriteShots: LinkableImageProps[] = [
   {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/326055653/large.jpg",
+    href: "https://inaturalist.ca/observations/186561156",
+    common: "Red-tailed Hawk",
+    scientific: "Buteo jamaicensis",
+  },
+  {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/266002730/large.jpg",
     href: "https://inaturalist.ca/observations/153975935",
     common: "Common Loon",
     scientific: "Gavia immer",
+  },
+  {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/326055537/large.jpg",
+    href: "https://inaturalist.ca/observations/186561147",
+    common: "Cabbage White",
+    scientific: "Pieris rapae",
   },
   {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/257205266/large.jpg",
