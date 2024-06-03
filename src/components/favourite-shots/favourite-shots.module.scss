@@ -2,6 +2,7 @@
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 1em;
 }
 @media screen and (max-width: 650px) {
   .favouriteShotsGrid {

@@ -25,6 +25,12 @@ const FavouriteShot = (props: LinkableImageProps) => {
 
 const _favouriteShots: LinkableImageProps[] = [
   {
+    src: "https://inaturalist-open-data.s3.amazonaws.com/photos/354293986/large.jpg",
+    href: "https://inaturalist.ca/observations/200776262",
+    common: "Zebra Dove",
+    scientific: "Geopelia striata",
+  },
+  {
     src: "https://inaturalist-open-data.s3.amazonaws.com/photos/326055653/large.jpg",
     href: "https://inaturalist.ca/observations/186561156",
     common: "Red-tailed Hawk",

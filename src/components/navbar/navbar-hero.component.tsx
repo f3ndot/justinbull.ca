@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ContentWrapper } from "../content-wrapper";
 import "./navbar.css";
 
-const HiatusEmoji = ({ refreshInterval }: { refreshInterval?: number }) => {
+const TattooEmoji = ({ refreshInterval }: { refreshInterval?: number }) => {
   const _refreshInterval = refreshInterval ?? 1000;
-  const hiatusEmojis = ["🎉", "🚴‍♀️", "📸", "😴", "✈️"].map((emoji) => (
+  const tattooEmojis = ["🐙", "🎨", "🖋️", "🧑‍🎨"].map((emoji) => (
     <span
       key={emoji}
       style={{
@@ -16,13 +16,13 @@ const HiatusEmoji = ({ refreshInterval }: { refreshInterval?: number }) => {
       {emoji}
     </span>
   ));
-  const [emoji, setEmoji] = useState<typeof hiatusEmojis[0]>(hiatusEmojis[0]);
+  const [emoji, setEmoji] = useState<(typeof tattooEmojis)[0]>(tattooEmojis[0]);
 
   useEffect(() => {
     let currentEmojiIndex = 0;
     const interval = setInterval(() => {
-      currentEmojiIndex = (currentEmojiIndex + 1) % hiatusEmojis.length;
-      setEmoji(hiatusEmojis[currentEmojiIndex]);
+      currentEmojiIndex = (currentEmojiIndex + 1) % tattooEmojis.length;
+      setEmoji(tattooEmojis[currentEmojiIndex]);
     }, _refreshInterval);
     return () => {
       clearInterval(interval);
@@ -48,9 +48,14 @@ export const NavbarHero = () => {
               AngularJS, and BackboneJS.
             </h2>
             <div>
-              <code className="navbar--code-status">
-                I‘m on hiatus until 2024 <HiatusEmoji refreshInterval={1500} />
-              </code>
+              <a
+                className="navbar--code-status"
+                href="https://www.venue.ink/"
+                target="_blank"
+              >
+                I‘m making tattoo software{" "}
+                <TattooEmoji refreshInterval={1500} />
+              </a>
             </div>
           </div>
           <div style={{ textAlign: "center" }}>

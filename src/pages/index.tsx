@@ -64,10 +64,8 @@ const IndexPage: React.FC<PageProps> = () => {
           <h1>Work-related</h1>
           <ul>
             <li>
-              <strong>
-                <em>I'm on hiatus!</em>
-              </strong>{" "}
-              🔕
+              Currently building a booking app for tattoo artists and studios
+              with <ExternalA href="https://venue.ink">Venue.ink</ExternalA>
             </li>
             <li>
               <a href="/resume/">Resumé</a> (2023)
@@ -110,8 +108,11 @@ const IndexPage: React.FC<PageProps> = () => {
         <a href="https://blog.justinbull.ca/">Blog</a>{" "}
         <small>(seldom updated)</small>
       </div>
-      <h1>My Fav Nature Shots</h1>
-      <p>
+      <h1 style={{ marginBottom: "0.5em" }}>Fav Nature Shots</h1>
+      <p className={s.favNature}>
+        My online presence is too job focused. So here's some photos I took 📸
+      </p>
+      <p className={s.favNature}>
         All photos{" "}
         <img
           src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
